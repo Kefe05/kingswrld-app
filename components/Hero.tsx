@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 export default function Hero() {
@@ -15,9 +16,9 @@ export default function Hero() {
         <h1 className="text-7xl md:text-[9rem] font-bold tracking-tighter leading-none mb-8">
           KINGSWRLD
         </h1>
-        <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-10 py-6 text-lg">
-          <Link href="#about">See More</Link>
-        </Button>
+        <Link href="#about" className={cn(buttonVariants({ variant: "default" }), "bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-10 py-6 text-lg")}>
+          See More
+        </Link>
       </motion.div>
     </section>
   )

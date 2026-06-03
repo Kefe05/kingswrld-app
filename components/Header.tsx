@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export default function Header() {
   return (
@@ -20,9 +21,9 @@ export default function Header() {
           </Link>
         </nav>
         <div className="flex gap-4">
-          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8">
-            <Link href="#contact">CONTACT</Link>
-          </Button>
+          <Link href="#contact" className={cn(buttonVariants({ variant: "default" }), "bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8")}>
+            CONTACT
+          </Link>
         </div>
       </div>
     </header>
