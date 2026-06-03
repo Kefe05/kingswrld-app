@@ -30,9 +30,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex w-full flex-col items-start text-white md:w-[60%]"
+          className="flex w-full flex-col items-center text-center md:items-start md:text-left text-white md:w-[60%]"
         >
-          <h1 className="mb-8 text-3xl leading-none font-bold tracking-tighter md:text-7xl">
+          <h1 className="mb-8 text-4xl sm:text-5xl leading-tight font-bold tracking-tighter md:text-7xl md:leading-none">
             We Help Business with websites that converts
           </h1>
           <Link
